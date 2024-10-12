@@ -8,9 +8,10 @@ public class MainFrame {
     public MainFrame() {
         frame = new JFrame();
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setSize(400, 400);
+        frame.setSize(220, 220);
         Circle circle = new Circle(Color.RED);
-        JPanel circlePlace = drawFigure(circle, 50, 50);
+        System.out.println(circle.getDescription());
+        JPanel circlePlace = drawFigure(circle, 50, 30);
         frame.add(circlePlace);
     }
 
