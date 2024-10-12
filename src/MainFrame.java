@@ -3,15 +3,16 @@ import java.awt.*;
 
 public class MainFrame {
 
-    private JFrame frame;
+    private final JFrame frame;
 
     public MainFrame() {
         frame = new JFrame();
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setSize(220, 220);
-        Circle circle = new Circle(Color.RED);
-        System.out.println(circle.getDescription());
-        JPanel circlePlace = drawFigure(circle, 50, 30);
+        Figure circle = new Circle(Color.RED);
+        Figure circleWithBorder = new BorderDecorator(circle, 2f);
+        System.out.println(circleWithBorder.getDescription());
+        JPanel circlePlace = drawFigure(circleWithBorder, 50, 30);
         frame.add(circlePlace);
     }
 

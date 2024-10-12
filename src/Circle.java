@@ -4,8 +4,6 @@ import static java.awt.Color.*;
 
 public class Circle implements Figure{
 
-    private final int diameter = 100;
-
     protected Color color;
 
     public Circle(Color color) {
@@ -20,9 +18,7 @@ public class Circle implements Figure{
     @Override
     public void draw(int x, int y, Graphics g) {
         g.setColor(RED);
-        g.fillOval(x, y, diameter, diameter);
+        g.fillOval(x, y, 100, 100);
     }
-
-
 
 }
