@@ -9,10 +9,14 @@ public class MainFrame {
         frame = new JFrame();
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         frame.setSize(220, 220);
+
         Figure circle = new Circle(Color.RED);
         Figure circleWithBorder = new BorderDecorator(circle, 2f);
-        System.out.println(circleWithBorder.getDescription());
-        JPanel circlePlace = drawFigure(circleWithBorder, 50, 30);
+        Figure circleWithBorderAndShadow = new ShadowDecorator(circleWithBorder);
+
+        System.out.println(circleWithBorderAndShadow.getDescription());
+
+        JPanel circlePlace = drawFigure(circleWithBorderAndShadow, 50, 30);
         frame.add(circlePlace);
     }
 
