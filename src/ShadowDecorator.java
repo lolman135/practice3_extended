@@ -17,7 +17,7 @@ public class ShadowDecorator extends FigureDecorator{
     public void draw(int x, int y, Graphics g) {
 
         g.setColor(shadowColor);
-        int shadowOffset = 5;
+        int shadowOffset = 10;
         g.fillOval(x + shadowOffset, y + shadowOffset, 102, 102);
 
         super.draw(x, y, g);

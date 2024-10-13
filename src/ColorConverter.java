@@ -4,7 +4,7 @@ public class ColorConverter {
 
     public static String convertToWord(Color color) {
         if (color == null) {
-            return "Unknown"; // Handle null case
+            return "Unknown";
         }
 
         if (color.equals(Color.RED)) {
@@ -32,7 +32,7 @@ public class ColorConverter {
         } else if (color.equals(Color.BLACK)) {
             return "Black";
         } else {
-            return "Unknown"; // Default case for colors not explicitly handled
+            return "Unknown";
         }
     }
 }
