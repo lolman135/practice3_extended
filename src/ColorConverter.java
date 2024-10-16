@@ -1,7 +1,16 @@
 import java.awt.*;
 
+/**
+ * Class {code ColorConverter} allow to convert some {@code Color}
+ * object to {@code String} word that describes it
+ * @author Kusovskyi Kyrylo
+ */
 public class ColorConverter {
 
+    /**
+     * @param color {@code Color} object to convert
+     * @return {@code String} word that describes input object
+     */
     public static String convertToWord(Color color) {
         if (color == null) {
             return "Unknown";

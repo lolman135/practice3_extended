@@ -1,0 +1,19 @@
+<project name="Practice 3" default="generate-javadoc" basedir=".">
+
+    <property name="docDir" value="doc"/>
+    <property name="sourceDir" value="src"/>
+
+    <target name="clean">
+        <delete dir="${docDir}"/>
+    </target>
+
+    <target name="generate-javadoc" depends="clean">
+        <mkdir dir="${docDir}"/>
+        <javadoc destdir="${docDir}" sourcepath="${sourceDir}" verbose="true">
+            <fileset dir="${sourceDir}">
+                <include name="**/*.java"/>
+            </fileset>
+        </javadoc>
+    </target>
+</project>
+
